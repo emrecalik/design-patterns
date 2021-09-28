@@ -1,0 +1,14 @@
+public class Bike extends Vehicle {
+
+    @Override
+    public void produce() {
+        System.out.println("***Bike Production***");
+        processes.forEach(process -> process.doWork(this));
+        System.out.println("***Completed***\n");
+    }
+
+    @Override
+    public int processTime() {
+        return 5;
+    }
+}
